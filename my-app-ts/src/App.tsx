@@ -1,13 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import robots from '../src/mockdata/robot.json'
 import Robot from './components/Robot'
 
-function App(a) {
+function App() {
   return (
     <ul>
-      {robots.map(r => <Robot id={r.id} email={r.email} name={r.name} />)}
+      {robots.map(r =>
+        <Robot
+          id={r.id}
+          email={r.email}
+          name={r.name}
+        />)
+      }
     </ul>
   );
 }
